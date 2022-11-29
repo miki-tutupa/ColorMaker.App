@@ -20,17 +20,20 @@
                 <Slider x:Name="sldRed"
                         ThumbColor="{StaticResource Primary}"
                         MaximumTrackColor="{StaticResource Secondary}"
-                        MinimumTrackColor="{StaticResource Tertiary}"/>
+                        MinimumTrackColor="{StaticResource Tertiary}"
+                        ValueChanged="Slider_ValueChanged"/>
                 <Label Text="Green value:"/>
                 <Slider x:Name="sldGreen"
                         ThumbColor="{StaticResource Primary}"
                         MaximumTrackColor="{StaticResource Secondary}"
-                        MinimumTrackColor="{StaticResource Tertiary}"/>
+                        MinimumTrackColor="{StaticResource Tertiary}"
+                        ValueChanged="Slider_ValueChanged"/>
                 <Label Text="Blue value:"/>
                 <Slider x:Name="sldBlue"
                         ThumbColor="{StaticResource Primary}"
                         MaximumTrackColor="{StaticResource Secondary}"
-                        MinimumTrackColor="{StaticResource Tertiary}"/>
+                        MinimumTrackColor="{StaticResource Tertiary}"
+                        ValueChanged="Slider_ValueChanged"/>
                 <Frame CornerRadius="25" HorizontalOptions="Center">
                     <HorizontalStackLayout>
                         <Label x:Name="lblHex"
@@ -41,10 +44,15 @@
                                      HeightRequest="25"
                                      Source="copy.svg"
                                      VerticalOptions="Center"
-                                     WidthRequest="25"/>
+                                     WidthRequest="25"
+                                     Clicked="ImageButton_Clicked"/>
 
                     </HorizontalStackLayout>
                 </Frame>
+                <Button x:Name="btnRandom"
+                        BackgroundColor="{StaticResource Primary}"
+                        Text="Generate random color"
+                        Clicked="BtnRandom_Clicked" />
             </VerticalStackLayout>
         </Frame>
     </Grid>
